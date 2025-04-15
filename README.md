@@ -1,48 +1,89 @@
 # Python LLM Examples
 
-A collection of Python examples for working with Large Language Models.
+A collection of Python examples demonstrating various Large Language Model (LLM) applications and integrations.
 
-## Project Setup
+## Overview
 
-1. Install Python using pyenv:
+This repository contains practical examples and implementations of LLM-based applications using Python. The examples cover different use cases, architectures, and integration patterns with various LLM providers.
+
+## Prerequisites
+
+- Python 3.11 or higher
+- Poetry for dependency management
+
+## Installation
+
+1. Clone the repository:
 ```bash
-pyenv install 3.11.0
-pyenv local 3.11.0
+git clone https://github.com/yourusername/python-llm-examples.git
+cd python-llm-examples
 ```
 
-2. Create and activate a virtual environment:
+2. Install Poetry (if not already installed):
+see https://python-poetry.org/
+
+3. Install dependencies:
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+make install
 ```
 
-3. Install pip-tools:
-```bash
-pip install pip-tools
-```
+## Development
 
-4. Compile and install requirements:
+### Code Quality Tools
+
+The project uses several tools to maintain code quality:
+
+- **black**: Code formatting
+- **isort**: Import sorting
+- **flake8**: Linting
+- **mypy**: Static type checking
+- **pytest**: Testing framework
+
+### Make Commands
+
+The project includes a Makefile with common development commands:
+
 ```bash
-pip-compile requirements.in
-pip-sync requirements.txt
+# Install dependencies
+make install
+
+# Run tests
+make test
+
+# Run tests with coverage
+make test-cov
+
+# Format code
+make format
+
+# Run linter
+make lint
+
+# Run type checker
+make typecheck
+
+# Run all checks (format, lint, typecheck, test)
+make check
+
+# Clean up cache files and build artifacts
+make clean
 ```
 
 ## Project Structure
 
 ```
-.
-├── src/                    # Source code
-│   └── python_llm_examples/
-├── tests/                  # Test files
-├── docs/                   # Documentation
-├── requirements.in         # Direct dependencies
-└── requirements.txt        # Compiled dependencies (generated)
+python-llm-examples/
+├── src/               # Source code
+├── tests/            # Test files
+├── pyproject.toml    # Project configuration
+├── Makefile         # Development commands
+└── README.md        # This file
 ```
 
-## Development
+## Examples
 
-- Run tests: `pytest`
-- Format code: `black .`
-- Sort imports: `isort .`
-- Lint code: `flake8`
-- Type checking: `mypy .` 
+tbd
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
