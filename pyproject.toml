@@ -12,7 +12,9 @@ dependencies = [
     "diffusers (>=0.33.1,<0.34.0)",
     "torch (>=2.6.0,<3.0.0)",
     "transformers (>=4.51.3,<5.0.0)",
-    "accelerate (>=1.6.0,<2.0.0)"
+    "accelerate (>=1.6.0,<2.0.0)",
+    "protobuf (>=6.30.2,<7.0.0)",
+    "sentencepiece (>=0.2.0,<0.3.0)"
 ]
 
 [tool.poetry]
