@@ -14,7 +14,9 @@ dependencies = [
     "transformers (>=4.51.3,<5.0.0)",
     "accelerate (>=1.6.0,<2.0.0)",
     "protobuf (>=6.30.2,<7.0.0)",
-    "sentencepiece (>=0.2.0,<0.3.0)"
+    "sentencepiece (>=0.2.0,<0.3.0)",
+    "langchain-ollama (>=0.3.2,<0.4.0)",
+    "no-implicit-optional (>=1.4,<2.0)",
 ]
 
 [tool.poetry]
