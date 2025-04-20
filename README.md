@@ -82,4 +82,29 @@ python-llm-examples/
 
 ## Examples
 
-tbd
+### 1. LangChain with Ollama
+This example demonstrates how to use LangChain with Ollama to run different LLM models locally. It supports various Llama models including llama3.2:1b, llama3.2:3b, and llama3.3.
+
+To run this example:
+```bash
+python src/examples/example_LangChain_Ollama.py
+```
+
+Prerequisites:
+- Ollama must be installed and running locally
+- The desired Llama models must be pulled using Ollama (e.g., `ollama pull llama3.3`)
+
+### 2. Stable Diffusion 3 Image Generation
+This example shows how to generate images using Stable Diffusion 3. It supports both the medium and large models.
+
+To run this example:
+```bash
+python src/examples/example_StableDiffusion3.py
+```
+
+Prerequisites:
+- PyTorch installed with CUDA or MPS support
+- Sufficient GPU memory (recommended 8GB+ for medium model, 16GB+ for large model)
+- The first run will download the model weights (several GB)
+
+The example will generate images using both the medium and large models and save them as PNG files.
