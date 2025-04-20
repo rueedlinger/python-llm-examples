@@ -3,6 +3,7 @@ from langchain_ollama import ChatOllama
 
 def get_response(prompt: str, model: str = "llama3.3"):
     llm = ChatOllama(
+        base_url="http://localhost:11434",
         model=model,
         temperature=0.8,
         num_predict=256,
