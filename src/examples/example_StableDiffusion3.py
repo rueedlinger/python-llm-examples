@@ -23,8 +23,8 @@ def generate_image(
     pipe = StableDiffusion3Pipeline.from_pretrained(model_id).to(device)
 
     # Set up a generator for reproducibility
-    if seed is None:
-        generator = torch.Generator(device=device).manual_seed(42)
+    if seed is not None:
+        generator = torch.Generator(device=device).manual_seed(seed)
     else:
         generator = torch.Generator(device=device)
 
