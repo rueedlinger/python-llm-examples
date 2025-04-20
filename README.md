@@ -87,7 +87,7 @@ This example demonstrates how to use LangChain with Ollama to run different LLM 
 
 To run this example:
 ```bash
-python src/examples/example_LangChain_Ollama.py
+poetry run python src/examples/example_LangChain_Ollama.py
 ```
 
 Prerequisites:
@@ -99,7 +99,7 @@ This example shows how to generate images using Stable Diffusion 3. It supports 
 
 To run this example:
 ```bash
-python src/examples/example_StableDiffusion3.py
+poetry run python src/examples/example_StableDiffusion3.py
 ```
 
 Prerequisites:
