@@ -1,14 +1,13 @@
 import torch
-from diffusers import StableDiffusion3Pipeline
-from PIL import Image
+from diffusers import StableDiffusionPipeline
 
 
 def generate_image(
     prompt: str,
-    model_id: str = "stabilityai/stable-diffusion-3-medium-diffusers",
+    model_id: str = "stabilityai/stable-diffusion-2",
     seed: int | None = None,
-) -> Image.Image:
-    # Set device
+):
+
     device = (
         "mps"
         if torch.backends.mps.is_available()
@@ -17,9 +16,9 @@ def generate_image(
 
     # Load the pipeline
     if model_id is None:
-        model_id = "stabilityai/stable-diffusion-3-medium-diffusers"
+        model_id = "stabilityai/stable-diffusion-2"
 
-    pipe = StableDiffusion3Pipeline.from_pretrained(model_id).to(device)
+    pipe = StableDiffusionPipeline.from_pretrained(model_id).to(device)
 
     # Set up a generator for reproducibility
     if seed is not None:
@@ -27,7 +26,7 @@ def generate_image(
     else:
         generator = torch.Generator(device=device)
 
-    # Run the pipeline, showing some of the available arguments
+    # Run the pipeline
     pipe_output = pipe(
         prompt=prompt,  # What to generate
         # negative_prompt="Oversaturated, blurry, low quality",  # What NOT to generate
@@ -42,11 +41,9 @@ def generate_image(
     return pipe_output.images[0]
 
 
-# Example usage
 if __name__ == "__main__":
     for model in [
-        "stabilityai/stable-diffusion-3-medium-diffusers",
-        "stabilityai/stable-diffusion-3.5-large",
+        "stabilityai/stable-diffusion-2",
     ]:
         image = generate_image(
             "Palette knife painting of an autumn cityscape", seed=None
