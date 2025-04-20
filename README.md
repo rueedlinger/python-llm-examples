@@ -94,6 +94,9 @@ Prerequisites:
 - Ollama must be installed and running locally
 - The desired Llama models must be pulled using Ollama (e.g., `ollama pull llama3.3`)
 
+Jupyter Notebook:
+- [LangChain with Ollama](notebooks/LangChain_Ollama.ipynb)
+
 ### 2. Stable Diffusion 3 Image Generation
 This example shows how to generate images using Stable Diffusion 3. It supports both the medium and large models.
 
@@ -108,3 +111,6 @@ Prerequisites:
 - The first run will download the model weights (several GB)
 
 The example will generate images using both the medium and large models and save them as PNG files.
+
+Jupyter Notebook:
+- [Stable Diffusion 3 Models with Diffusers (Hugging Face)](notebooks/StableDiffusion3.ipynb)
