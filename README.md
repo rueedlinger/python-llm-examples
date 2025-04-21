@@ -10,7 +10,7 @@ This repository contains practical examples and implementations of LLM-based app
 
 #### Text-to-Text
 - [LangChain with Ollama (Llama)](notebooks/LangChain_Ollama.ipynb)
-- [Pydantic AI with Ollama](notebooks/PydanticAI_Ollama.ipynb)
+- [Pydantic AI with Ollama (Llama)](notebooks/PydanticAI_Ollama.ipynb)
 
 #### Text-to-Image
 - [Stable Diffusion 2 Models with Diffusers (Hugging Face)](notebooks/StableDiffusion2.ipynb)
