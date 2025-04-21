@@ -8,12 +8,16 @@ This repository contains practical examples and implementations of LLM-based app
 
 ### Examples
 
-
-#### Transformer-based large language model 
+#### Text-to-Text
 - [LangChain with Ollama (Llama)](notebooks/LangChain_Ollama.ipynb)
+- [Pydantic AI with Ollama](notebooks/PydanticAI_Ollama.ipynb)
 
-#### Multimodal Diffusion Transformer (MMDiT) text-to-image model 
+#### Text-to-Image
+- [Stable Diffusion 2 Models with Diffusers (Hugging Face)](notebooks/StableDiffusion2.ipynb)
 - [Stable Diffusion 3 Models with Diffusers (Hugging Face)](notebooks/StableDiffusion3.ipynb)
+
+#### Image-to-Text
+- [LLaVA with Ollama for Image Descriptions](notebooks/LLaVA_Ollama.ipynb)
 
 
 
@@ -31,14 +35,14 @@ cd python-llm-examples
 ```
 
 2. Install Poetry (if not already installed):
-see https://python-poetry.org/
+See [Poetry's official documentation](https://python-poetry.org/).
 
 3. Install dependencies:
 ```bash
 poetry install
 ```
-4. Run Jupyter
 
+4. Run Jupyter:
 ```bash
 poetry run jupyter lab
 ```
