@@ -23,7 +23,7 @@ def get_countries(model_id: str, query: str):
         retries=5,
         system_prompt=(
             "You are a helpful AI assistant. "
-            "You will be given a a text and you need to extract the countries from it. "
+            "You will be given a text and you need to extract the countries from it. "
         ),
     )
     result = agent.run_sync(query)
